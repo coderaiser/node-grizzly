@@ -1,0 +1,25 @@
+{
+  "name": "github-release",
+  "version": "1.0.0",
+  "description": "create release on github",
+  "main": "lib/release.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/coderaiser/node-github-release.git"
+  },
+  "keywords": [
+    "github",
+    "release"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/node-github-release/issues"
+  },
+  "dependencies": {
+    "github": "~0.2.3"
+  }
+}

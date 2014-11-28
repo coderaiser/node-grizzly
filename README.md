@@ -1,6 +1,6 @@
 # Grizzly
 
-Add data to the beginning of file
+Create release on github with help of node.
 
 ## Install
 

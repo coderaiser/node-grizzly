@@ -15,7 +15,6 @@
         tryRequire  = require('tryrequire'),
         
         argv        = process.argv,
-        argsEmpty   = Object.keys(args).length === 1,
         args        = require('minimist')(argv.slice(2), {
             string: ['repo', 'owner', 'tagname', 'name', 'body', 'token'],
             alias: {
@@ -29,6 +28,8 @@
                 tn: 'token'
             }
         }),
+        
+        argsEmpty   = Object.keys(args).length === 1,
         
         config      = tryRequire(HOME + '.github-release') || {
             token: args.token

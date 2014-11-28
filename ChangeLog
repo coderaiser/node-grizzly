@@ -1,3 +1,9 @@
+2014.11.28, v1.0.6
+
+fix:
+- (release) work with args before initializing
+
+
 2014.11.28, v1.0.5
 
 fix:

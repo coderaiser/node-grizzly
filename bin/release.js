@@ -63,19 +63,21 @@
             ]);
         });
         
-        if (error)
-            console.error(error.message);
-        else
+        if (!error)
             release(token, {
                 repo    : args.repo,
                 owner   : args.owner,
                 tag_name: args.tagname,
                 name    : args.name,
                 body    : args.body
-            }, function(error) {
-                if (error)
-                    console.error(error.message);
-            });
+            }, log);
+        
+        log(error);
+    }
+    
+    function log(error) {
+        if (error)
+            console.error(error.message);
     }
     
     function version() {

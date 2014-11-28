@@ -1,18 +1,18 @@
-# Github Release
+# Grizzly
 
 Add data to the beginning of file
 
 ## Install
 
 ```
-npm i github-release -g
+npm i grizzly -g
 ```
 ## How to use?
 
 ### Global
 
 ```
-$ github-release
+$ grizzly
 -h, --help     : display this help and exit,
 -v, --version  : output version information and exit,
 -r, --repo     : name of repository,
@@ -22,21 +22,21 @@ $ github-release
 -b, --body     : body of release,
 -tn, --token   : github token <https://github.com/settings/tokens/new>
 
-$ github-release -tn "token from url" \
--r github-release -o coderaiser -t v1.0.0 \
--n "github-release v1.0.0" -b "some body"
+$ grizzly -tn "token from url" \
+-r grizzly -o coderaiser -t v1.0.0 \
+-n "grizzly v1.0.0" -b "some body"
 ```
 
 ### Local
 
 ```
-npm i github-release --save
+npm i grizzly --save
 ```
 
 ## Example
 
 ```js
-var release = require('github-release'),
+var release = require('grizzly'),
     token   = 'token from https://github.com/settings/applications';
 
 release(token, {

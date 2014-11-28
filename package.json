@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "create release on github",
   "main": "lib/release.js",
+  "bin": {
+    "github-release": "bin/release.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +23,10 @@
     "url": "https://github.com/coderaiser/node-github-release/issues"
   },
   "dependencies": {
-    "github": "~0.2.3"
+    "checkup": "~1.0.2",
+    "execon": "~1.0.1",
+    "github": "~0.2.3",
+    "minimist": "~1.1.0",
+    "tryrequire": "~1.1.3"
   }
 }

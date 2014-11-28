@@ -15,6 +15,7 @@
         tryRequire  = require('tryrequire'),
         
         argv        = process.argv,
+        argsEmpty   = Object.keys(args).length === 1,
         args        = require('minimist')(argv.slice(2), {
             string: ['repo', 'owner', 'tagname', 'name', 'body', 'token'],
             alias: {
@@ -35,7 +36,7 @@
     
     if (args.version)
         version();
-    else if (args.help || !args._.length)
+    else if (args.help || argsEmpty)
         help();
     else if (!config.token)
         console.error([

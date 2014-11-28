@@ -81,13 +81,16 @@
     }
     
     function version() {
-        console.log('v' + require('../package').version);
+        console.log('v' + info().version);
+    }
+    
+    function info() {
+        return require('../package');
     }
     
     function help() {
         var bin         = require('../json/bin'),
-            info        = require('../package'),
-            usage       = 'Usage: ' + info.name + ' [options]';
+            usage       = 'Usage: ' + info().name + ' [options]';
             
         console.log(usage);
         console.log('Options:');

@@ -13,6 +13,8 @@ npm i grizzly -g
 
 ```
 $ grizzly
+Usage: grizzly [options]
+Options:
 -h, --help     : display this help and exit,
 -v, --version  : output version information and exit,
 -r, --repo     : name of repository,

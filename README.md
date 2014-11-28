@@ -43,7 +43,7 @@ var release = require('grizzly'),
 
 release(token, {
     repo    : 'coderaiser',
-    owner   : 'github-release,
+    owner   : 'github-release',
     tag_name: 'v1.0.0',
     name    : 'github-release v1.0.0',
     body    : 'changelog'

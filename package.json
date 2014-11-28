@@ -26,6 +26,7 @@
     "checkup": "~1.0.2",
     "execon": "~1.0.1",
     "github": "~0.2.3",
-    "minimist": "~1.1.0"
+    "minimist": "~1.1.0",
+    "readjson": "~1.0.0"
   }
 }

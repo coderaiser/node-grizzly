@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "checkup": "~1.0.2",
+    "debug": "~2.1.0",
     "execon": "~1.0.1",
     "github": "~0.2.3",
     "minimist": "~1.1.0",

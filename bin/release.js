@@ -5,14 +5,8 @@
     
     var release     = require('..'),
         
-        HOME_WIN    = process.env.HOMEPATH,
-        HOME_UNIX   = process.env.HOME,
-        
-        HOME        = (HOME_UNIX || HOME_WIN) + '/',
-        
         check       = require('checkup'),
         exec        = require('execon'),
-        tryRequire  = require('tryrequire'),
         
         argv        = process.argv,
         args        = require('minimist')(argv.slice(2), {
@@ -29,34 +23,23 @@
             }
         }),
         
-        argsEmpty   = Object.keys(args).length === 1,
-        
-        config      = tryRequire(HOME + '.github-release') || {
-            token: args.token
-        };
+        argsEmpty   = Object.keys(args).length === 1;
     
     if (args.version)
         version();
     else if (args.help || argsEmpty)
         help();
-    else if (!config.token)
-        console.error([
-            'File ~/.github-release.json with token not found!',
-            'Please set --token parameter'
-        ].join('\n'));
     else
-        grizzly(config.token);
+        grizzly();
     
-    function grizzly(token) {
+    function grizzly() {
         var error   = exec.try(function() {
             check([
-                token,
                 args.repo,
                 args.owner,
                 args.tagname,
                 args.name,
                 args.body], [
-                'token',
                 'repo',
                 'owner',
                 'tagname',
@@ -66,7 +49,7 @@
         });
         
         if (!error)
-            release(token, {
+            release(args.token, {
                 repo    : args.repo,
                 owner   : args.owner,
                 tag_name: args.tagname,

@@ -43,9 +43,9 @@ var release = require('grizzly'),
 
 release(token, {
     repo    : 'coderaiser',
-    owner   : 'github-release',
+    owner   : 'grizzly',
     tag_name: 'v1.0.0',
-    name    : 'github-release v1.0.0',
+    name    : 'grizzly v1.0.0',
     body    : 'changelog'
 }, function(error) {
     if (error)

@@ -35,6 +35,10 @@ $ grizzly -tn "token from url" \
 npm i grizzly --save
 ```
 
+Data will be read before execution in next order (left is more important):
+
+`command line -> ~/.grizzly.json`
+
 ## Example
 
 ```js

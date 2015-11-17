@@ -1,6 +1,6 @@
 {
   "name": "grizzly",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "create release on github",
   "main": "lib/release.js",
   "bin": {

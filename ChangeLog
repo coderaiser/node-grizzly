@@ -1,3 +1,9 @@
+2015.11.17, v1.0.15
+
+fix:
+- (realese) call callback when error
+
+
 2015.07.04, v1.0.14
 
 feature:

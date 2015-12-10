@@ -27,7 +27,7 @@
     "debug": "^2.2.0",
     "execon": "~1.2.0",
     "github": "~0.2.3",
-    "minimist": "~1.1.0",
+    "minimist": "^1.2.0",
     "os-homedir": "~1.0.0",
     "readjson": "~1.1.0"
   }

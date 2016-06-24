@@ -1,6 +1,6 @@
 # Grizzly
 
-Create release on github with help of node.
+Create release on github with help of node. To upload asset use [putasset](https://github.com/coderaiser/node-putasset "Putasset").
 
 ## Install
 

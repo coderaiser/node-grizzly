@@ -2,15 +2,15 @@
 
 (function() {
     'use strict';
-    
+
     var release     = require('..'),
-        
+
         check       = require('checkup'),
         exec        = require('execon'),
-        
+
         argv        = process.argv,
         args        = require('minimist')(argv.slice(2), {
-            string: ['repo', 'owner', 'tagname', 'name', 'body', 'token'],
+            string: ['repo', 'owner', 'tagname', 'name', 'body', 'token', 'prerelease'],
             alias: {
                 v: 'version',
                 h: 'help',
@@ -19,19 +19,20 @@
                 t: 'tagname',
                 n: 'name',
                 b: 'body',
-                tn: 'token'
+                tn: 'token',
+                p: 'prerelease'
             }
         }),
-        
+
         argsEmpty   = Object.keys(args).length === 1;
-    
+
     if (args.version)
         version();
     else if (args.help || argsEmpty)
         help();
     else
         grizzly();
-    
+
     function grizzly() {
         var error   = exec.try(function() {
             check([
@@ -47,39 +48,40 @@
                 'body'
             ]);
         });
-        
+
         if (!error)
             release(args.token, {
-                repo    : args.repo,
-                owner   : args.owner,
-                tag_name: args.tagname,
-                name    : args.name,
-                body    : args.body
+                repo      : args.repo,
+                owner     : args.owner,
+                tag_name  : args.tagname,
+                name      : args.name,
+                body      : args.body,
+                prerelease: args.prerelease || false
             }, log);
-        
+
         log(error);
     }
-    
+
     function log(error) {
         if (error)
             console.error(error.message);
     }
-    
+
     function version() {
         console.log('v' + info().version);
     }
-    
+
     function info() {
         return require('../package');
     }
-    
+
     function help() {
         var bin         = require('../json/bin'),
             usage       = 'Usage: ' + info().name + ' [options]';
-            
+
         console.log(usage);
         console.log('Options:');
-        
+
         Object.keys(bin).forEach(function(name) {
             var line = '  ' + name + ' ' + bin[name];
             console.log(line);

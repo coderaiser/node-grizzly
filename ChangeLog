@@ -1,3 +1,15 @@
+2016.06.27, v2.0.0
+
+feature:
+- (package) github v2.0.0
+- (grizzly) rm IFFE
+- (help) bin -> help
+- (grizzly) add prerelease (closes #2)
+- (grizzly) tagname -> tag
+- (grizzly) release -> grizzly
+- (grizzly) owner -> user
+
+
 2016.06.07, v1.0.18
 
 fix:

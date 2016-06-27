@@ -1,10 +1,12 @@
 {
-    "-h, --help     ": "display this help and exit",
-    "-v, --version  ": "output version information and exit",
-    "-r, --repo     ": "name of repository",
-    "-o, --owner    ": "owner of repository",
-    "-t, --tagname  ": "tag of repository (shoul exist!)",
-    "-n, --name     ": "name of release",
-    "-b, --body     ": "body of release",
-    "-tn, --token   ": "github token <https://github.com/settings/tokens/new>"
+    "-h, --help      " : "display this help and exit",
+    "-v, --version   " : "output version information and exit",
+    "-r, --repo      " : "name of repository",
+    "-u, --user      " : "user of repository",
+    "-t, --tag       " : "tag of repository (shoul exist!)",
+    "-n, --name      " : "name of release",
+    "-b, --body      " : "body of release",
+    "-p, --prerelease" : "set prerelease",
+    "--no-prerelease " : "unset prerelease (default)",
+    "-tn, --token    " : "github token <https://github.com/settings/tokens/new>"
 }

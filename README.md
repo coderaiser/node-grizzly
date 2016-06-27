@@ -15,17 +15,19 @@ npm i grizzly -g
 $ grizzly
 Usage: grizzly [options]
 Options:
--h, --help     : display this help and exit,
--v, --version  : output version information and exit,
--r, --repo     : name of repository,
--u, --user     : user of repository,
--t, --tagname  : tag of repository (shoul exist!),
--n, --name     : name of release,
--b, --body     : body of release,
--tn, --token   : github token <https://github.com/settings/tokens/new>
+  -h, --help       display this help and exit
+  -v, --version    output version information and exit
+  -r, --repo       name of repository
+  -u, --user       user of repository
+  -t, --tagname    tag of repository (shoul exist!)
+  -n, --name       name of release
+  -b, --body       body of release
+  -p, --prerelease set prerelease
+  --no-prerelease  unset prerelease (default)
+  -tn, --token     github token <https://github.com/settings/tokens/new>
 
 $ grizzly -tn "token from url" \
--r grizzly -o coderaiser -t v1.0.0 \
+-r grizzly -u coderaiser -t v1.0.0 \
 -n "grizzly v1.0.0" -b "some body"
 ```
 
@@ -46,11 +48,12 @@ var grizzly = require('grizzly'),
     token   = 'token from https://github.com/settings/applications';
 
 grizzly(token, {
-    user    : 'coderaiser',
-    repo    : 'grizzly',
-    tag_name: 'v1.0.0',
-    name    : 'grizzly v1.0.0',
-    body    : 'changelog'
+    user: 'coderaiser',
+    repo: 'grizzly',
+    tag: 'v1.0.0',
+    name: 'grizzly v1.0.0',
+    body: 'changelog'
+    prerelease: false /* default */
 }, function(error) {
     if (error)
         console.error(error.message);
@@ -60,3 +63,4 @@ grizzly(token, {
 ## License
 
 MIT
+

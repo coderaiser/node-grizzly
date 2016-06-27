@@ -11,6 +11,7 @@
         argv        = process.argv,
         args        = require('minimist')(argv.slice(2), {
             string: ['repo', 'user', 'tag', 'name', 'body', 'token'],
+            boolean: ['prerelease'],
             alias: {
                 v: 'version',
                 h: 'help',
@@ -19,6 +20,7 @@
                 t: 'tag',
                 n: 'name',
                 b: 'body',
+                p: 'prerelease',
                 tn: 'token'
             }
         }),
@@ -50,11 +52,12 @@
         
         if (!error)
             release(args.token, {
-                repo    : args.repo,
-                user    : args.user,
-                tag     : args.tag,
-                name    : args.name,
-                body    : args.body
+                repo: args.repo,
+                user: args.user,
+                tag: args.tag,
+                name: args.name,
+                body: args.body,
+                prerelease: args.prerelease
             }, log);
         
         log(error);

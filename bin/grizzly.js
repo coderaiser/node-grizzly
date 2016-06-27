@@ -10,13 +10,13 @@
         
         argv        = process.argv,
         args        = require('minimist')(argv.slice(2), {
-            string: ['repo', 'user', 'tagname', 'name', 'body', 'token'],
+            string: ['repo', 'user', 'tag', 'name', 'body', 'token'],
             alias: {
                 v: 'version',
                 h: 'help',
                 r: 'repo',
                 u: 'user',
-                t: 'tagname',
+                t: 'tag',
                 n: 'name',
                 b: 'body',
                 tn: 'token'
@@ -52,7 +52,7 @@
             release(args.token, {
                 repo    : args.repo,
                 user    : args.user,
-                tag_name: args.tagname,
+                tag     : args.tag,
                 name    : args.name,
                 body    : args.body
             }, log);

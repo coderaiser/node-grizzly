@@ -19,7 +19,7 @@ Options:
   -v, --version    output version information and exit
   -r, --repo       name of repository
   -u, --user       user of repository
-  -t, --tagname    tag of repository (shoul exist!)
+  -t, --tag        tag of repository (shoul exist!)
   -n, --name       name of release
   -b, --body       body of release
   -p, --prerelease set prerelease

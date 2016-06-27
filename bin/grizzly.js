@@ -77,7 +77,7 @@
     }
     
     function help() {
-        var bin         = require('../json/bin'),
+        var bin         = require('../help'),
             usage       = 'Usage: ' + info().name + ' [options]';
             
         console.log(usage);

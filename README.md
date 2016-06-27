@@ -18,7 +18,7 @@ Options:
 -h, --help     : display this help and exit,
 -v, --version  : output version information and exit,
 -r, --repo     : name of repository,
--o, --owner    : owner of repository,
+-u, --user     : user of repository,
 -t, --tagname  : tag of repository (shoul exist!),
 -n, --name     : name of release,
 -b, --body     : body of release,
@@ -46,8 +46,8 @@ var release = require('grizzly'),
     token   = 'token from https://github.com/settings/applications';
 
 release(token, {
-    repo    : 'coderaiser',
-    owner   : 'grizzly',
+    user    : 'coderaiser',
+    repo    : 'grizzly',
     tag_name: 'v1.0.0',
     name    : 'grizzly v1.0.0',
     body    : 'changelog'

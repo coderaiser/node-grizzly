@@ -10,12 +10,12 @@
         
         argv        = process.argv,
         args        = require('minimist')(argv.slice(2), {
-            string: ['repo', 'owner', 'tagname', 'name', 'body', 'token'],
+            string: ['repo', 'user', 'tagname', 'name', 'body', 'token'],
             alias: {
                 v: 'version',
                 h: 'help',
                 r: 'repo',
-                o: 'owner',
+                u: 'user',
                 t: 'tagname',
                 n: 'name',
                 b: 'body',
@@ -36,12 +36,12 @@
         var error   = exec.try(function() {
             check([
                 args.repo,
-                args.owner,
+                args.user,
                 args.tagname,
                 args.name,
                 args.body], [
                 'repo',
-                'owner',
+                'user',
                 'tagname',
                 'name',
                 'body'
@@ -51,7 +51,7 @@
         if (!error)
             release(args.token, {
                 repo    : args.repo,
-                owner   : args.owner,
+                user    : args.user,
                 tag_name: args.tagname,
                 name    : args.name,
                 body    : args.body

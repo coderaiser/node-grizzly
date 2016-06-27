@@ -1,4 +1,4 @@
-# Grizzly
+# Grizzly [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL]
 
 Create release on github with help of node. To upload asset use [putasset](https://github.com/coderaiser/node-putasset "Putasset").
 
@@ -63,4 +63,11 @@ grizzly(token, {
 ## License
 
 MIT
+
+[NPMIMGURL]:                https://img.shields.io/npm/v/grizzly.svg?style=flat
+[DependencyStatusIMGURL]:   https://img.shields.io/gemnasium/coderaiser/node-grizzly.svg?style=flat
+[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[NPMURL]:                   https://npmjs.org/package/grizzly "npm"
+[DependencyStatusURL]:      https://gemnasium.com/coderaiser/node-grizzly "Dependency Status"
+[LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
 

@@ -42,10 +42,10 @@ Data will be read before execution in next order (left is more important):
 ## Example
 
 ```js
-var release = require('grizzly'),
+var grizzly = require('grizzly'),
     token   = 'token from https://github.com/settings/applications';
 
-release(token, {
+grizzly(token, {
     user    : 'coderaiser',
     repo    : 'grizzly',
     tag_name: 'v1.0.0',

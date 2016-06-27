@@ -2,9 +2,9 @@
   "name": "grizzly",
   "version": "1.0.18",
   "description": "create release on github",
-  "main": "lib/release.js",
+  "main": "lib/grizzly.js",
   "bin": {
-    "grizzly": "bin/release.js"
+    "grizzly": "bin/grizzly.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

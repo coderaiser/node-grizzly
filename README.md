@@ -1,6 +1,6 @@
 # Grizzly [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL]
 
-Create release on github with help of node. To upload asset use [putasset](https://github.com/coderaiser/node-putasset "Putasset").
+Create release on github with help of node.
 
 ## Install
 
@@ -59,6 +59,11 @@ grizzly(token, {
         console.error(error.message);
 });
 ```
+
+## Related
+
+- [putasset](https://github.com/coderaiser/node-putasset "Putasset") Upload asset to release on github.
+
 
 ## License
 

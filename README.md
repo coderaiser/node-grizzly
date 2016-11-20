@@ -15,16 +15,17 @@ npm i grizzly -g
 $ grizzly
 Usage: grizzly [options]
 Options:
-  -h, --help       display this help and exit
-  -v, --version    output version information and exit
-  -r, --repo       name of repository
-  -u, --user       user of repository
-  -t, --tag        tag of repository (shoul exist!)
-  -n, --name       name of release
-  -b, --body       body of release
-  -p, --prerelease set prerelease
-  --no-prerelease  unset prerelease (default)
-  -tn, --token     github token <https://github.com/settings/tokens/new>
+  -h, --help              display this help and exit
+  -v, --version           output version information and exit
+  -r, --repo              name of repository
+  -u, --user              user of repository
+  -t, --tag               tag of repository (should exist!)
+  -tc, --target_commitish branch or commit for release (defaults to 'master')
+  -n, --name              name of release
+  -b, --body              body of release
+  -p, --prerelease        set prerelease
+  --no-prerelease         unset prerelease (default)
+  -tn, --token            github token <https://github.com/settings/tokens/new>
 
 $ grizzly -tn "token from url" \
 -r grizzly -u coderaiser -t v1.0.0 \
@@ -75,4 +76,3 @@ MIT
 [NPMURL]:                   https://npmjs.org/package/grizzly "npm"
 [DependencyStatusURL]:      https://gemnasium.com/coderaiser/node-grizzly "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
-

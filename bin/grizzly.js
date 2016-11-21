@@ -2,30 +2,28 @@
 
 'use strict';
 
-var release     = require('..'),
+var release = require('..');
+var check = require('checkup');
+var exec = require('execon');
+var argv = process.argv;
+var args = require('minimist')(argv.slice(2), {
+    string: ['repo', 'user', 'tag', 'target_commitish', 'name', 'body', 'token'],
+    boolean: ['prerelease'],
+    alias: {
+        v:  'version',
+        h:  'help',
+        r:  'repo',
+        u:  'user',
+        t:  'tag',
+        tc: 'target_commitish',
+        n:  'name',
+        b:  'body',
+        p:  'prerelease',
+        tn: 'token'
+    }
+});
 
-    check       = require('checkup'),
-    exec        = require('execon'),
-
-    argv        = process.argv,
-    args        = require('minimist')(argv.slice(2), {
-        string: ['repo', 'user', 'tag', 'target_commitish', 'name', 'body', 'token'],
-        boolean: ['prerelease'],
-        alias: {
-            v:  'version',
-            h:  'help',
-            r:  'repo',
-            u:  'user',
-            t:  'tag',
-            tc: 'target_commitish',
-            n:  'name',
-            b:  'body',
-            p:  'prerelease',
-            tn: 'token'
-        }
-    }),
-
-    argsEmpty   = Object.keys(args).length === 1;
+var argsEmpty = Object.keys(args).length === 1;
 
 if (args.version)
     version();
@@ -49,7 +47,7 @@ function grizzly() {
             'body'
         ]);
     });
-
+    
     if (!error)
         release(args.token, {
             repo:             args.repo,
@@ -60,7 +58,7 @@ function grizzly() {
             body:             args.body,
             prerelease:       args.prerelease
         }, log);
-
+    
     log(error);
 }
 
@@ -78,14 +76,15 @@ function info() {
 }
 
 function help() {
-    var bin         = require('../help'),
-        usage       = 'Usage: ' + info().name + ' [options]';
-
+    var bin = require('../help');
+    var usage = 'Usage: ' + info().name + ' [options]';
+    
     console.log(usage);
     console.log('Options:');
-
+    
     Object.keys(bin).forEach(function(name) {
         var line = '  ' + name + ' ' + bin[name];
         console.log(line);
     });
 }
+

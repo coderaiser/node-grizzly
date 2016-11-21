@@ -7,6 +7,9 @@
     "grizzly": "bin/grizzly.js"
   },
   "scripts": {
+    "lint": "redrun lint:*",
+    "lint:lib": "eslint lib",
+    "lint:bin": "eslint --rule 'no-console:0' bin",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,5 +33,9 @@
     "minimist": "^1.2.0",
     "os-homedir": "~1.0.0",
     "readjson": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.2",
+    "redrun": "^5.9.3"
   }
 }

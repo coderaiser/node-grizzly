@@ -39,7 +39,8 @@ function grizzly() {
             args.user,
             args.tagname,
             args.name,
-            args.body], [
+            args.body
+        ], [
             'repo',
             'user',
             'tagname',

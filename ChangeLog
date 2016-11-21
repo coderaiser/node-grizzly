@@ -1,3 +1,10 @@
+2016.11.21, v2.1.0
+
+feature:
+- (grizzly) add eslint
+- (grizzly) add -tc, --target_commitish
+
+
 2016.11.01, v2.0.4
 
 feature:

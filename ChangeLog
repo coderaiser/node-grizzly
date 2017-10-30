@@ -1,3 +1,11 @@
+2017.10.30, v3.0.0
+
+feature:
+- (grizzly) rm homedir ponyfill
+- (package) drop support of node < 4
+- (package) github v12.0.1
+
+
 2017.09.08, v2.1.5
 
 feature:

@@ -2,11 +2,11 @@
 
 'use strict';
 
-var release = require('..');
-var check = require('checkup');
-var exec = require('execon');
-var argv = process.argv;
-var args = require('minimist')(argv.slice(2), {
+const release = require('..');
+const check = require('checkup');
+const exec = require('execon');
+const argv = process.argv;
+const args = require('minimist')(argv.slice(2), {
     string: ['repo', 'user', 'tag', 'target_commitish', 'name', 'body', 'token'],
     boolean: ['prerelease'],
     alias: {
@@ -23,7 +23,7 @@ var args = require('minimist')(argv.slice(2), {
     }
 });
 
-var argsEmpty = Object.keys(args).length === 1;
+const argsEmpty = Object.keys(args).length === 1;
 
 if (args.version)
     version();
@@ -33,7 +33,7 @@ else
     grizzly();
 
 function grizzly() {
-    var error   = exec.try(function() {
+    const error   = exec.try(() => {
         check([
             args.repo,
             args.user,
@@ -77,14 +77,14 @@ function info() {
 }
 
 function help() {
-    var bin = require('../help');
-    var usage = 'Usage: ' + info().name + ' [options]';
+    const bin = require('../help');
+    const usage = 'Usage: ' + info().name + ' [options]';
     
     console.log(usage);
     console.log('Options:');
     
-    Object.keys(bin).forEach(function(name) {
-        var line = '  ' + name + ' ' + bin[name];
+    Object.keys(bin).forEach((name) => {
+        const line = '  ' + name + ' ' + bin[name];
         console.log(line);
     });
 }

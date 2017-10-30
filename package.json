@@ -37,5 +37,8 @@
   "devDependencies": {
     "eslint": "^4.0.0",
     "redrun": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }

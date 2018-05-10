@@ -70,9 +70,9 @@ grizzly(token, {
 MIT
 
 [NPMIMGURL]:                https://img.shields.io/npm/v/grizzly.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/gemnasium/coderaiser/node-grizzly.svg?style=flat
+[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/node-grizzly.svg?style=flat
 [LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [NPMURL]:                   https://npmjs.org/package/grizzly "npm"
-[DependencyStatusURL]:      https://gemnasium.com/coderaiser/node-grizzly "Dependency Status"
+[DependencyStatusURL]:      https://david-dm.org/coderaiser/node-grizzly "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
 

@@ -54,9 +54,8 @@ grizzly(token, {
     name: 'grizzly v1.0.0',
     body: 'changelog'
     prerelease: false /* default */
-}, (error) => {
-    if (error)
-        console.error(error.message);
+}).catch((error) => {
+    console.error(error.message);
 });
 ```
 

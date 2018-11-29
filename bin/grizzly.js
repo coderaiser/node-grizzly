@@ -49,18 +49,18 @@ function grizzly() {
         ]);
     });
     
-    if (!error)
-        release(args.token, {
-            repo:             args.repo,
-            user:             args.user,
-            tag:              args.tag,
-            target_commitish: args.target_commitish,
-            name:             args.name,
-            body:             args.body,
-            prerelease:       args.prerelease
-        }, log);
+    if (error)
+        return log(error);
     
-    log(error);
+    release(args.token, {
+        repo:             args.repo,
+        user:             args.user,
+        tag:              args.tag,
+        target_commitish: args.target_commitish,
+        name:             args.name,
+        body:             args.body,
+        prerelease:       args.prerelease
+    }).catch(log);
 }
 
 function log(error) {

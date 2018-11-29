@@ -1,3 +1,12 @@
+2018.11.29, v3.0.4
+
+feature:
+- (package) debug v4.1.0
+- (package) eslint v5.9.0
+- (package) redrun v7.0.3
+- (package) redrun v6.0.0
+
+
 2018.01.30, v3.0.3
 
 feature:

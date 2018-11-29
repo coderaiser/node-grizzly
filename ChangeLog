@@ -1,3 +1,9 @@
+2018.11.29, v4.0.0
+
+feature:
+- (package) @octokit/rest v16.1.0
+
+
 2018.11.29, v3.0.4
 
 feature:

@@ -7,10 +7,11 @@
     "grizzly": "bin/grizzly.js"
   },
   "scripts": {
-    "lint": "redrun lint:*",
-    "lint:lib": "eslint lib",
-    "lint:bin": "eslint --rule 'no-console:0' bin",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "madrun lint",
+    "lint:lib": "madrun lint:lib",
+    "lint:bin": "madrun lint:bin",
+    "fix:lint": "madrun fix:lint",
+    "test": "madrun test"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,8 @@
     "eslint": "^5.9.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-putout": "^1.3.1",
-    "redrun": "^7.0.3"
+    "madrun": "^2.1.0",
+    "putout": "^4.2.0"
   },
   "engines": {
     "node": ">=8.3.0"

@@ -5,7 +5,7 @@
 const release = require('..');
 const check = require('checkup');
 const tryCatch = require('try-catch');
-const argv = process.argv;
+const {argv} = process;
 const args = require('minimist')(argv.slice(2), {
     string: ['repo', 'user', 'tag', 'target_commitish', 'name', 'body', 'token'],
     boolean: ['prerelease'],

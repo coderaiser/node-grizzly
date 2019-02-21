@@ -4,7 +4,7 @@
 
 const release = require('..');
 const check = require('checkup');
-const exec = require('execon');
+const tryCatch = require('try-catch');
 const argv = process.argv;
 const args = require('minimist')(argv.slice(2), {
     string: ['repo', 'user', 'tag', 'target_commitish', 'name', 'body', 'token'],
@@ -19,8 +19,8 @@ const args = require('minimist')(argv.slice(2), {
         n:  'name',
         b:  'body',
         p:  'prerelease',
-        tn: 'token'
-    }
+        tn: 'token',
+    },
 });
 
 const argsEmpty = Object.keys(args).length === 1;
@@ -33,19 +33,19 @@ else
     grizzly();
 
 function grizzly() {
-    const error   = exec.try(() => {
+    const [error] = tryCatch(() => {
         check([
             args.repo,
             args.user,
             args.tagname,
             args.name,
-            args.body
+            args.body,
         ], [
             'repo',
             'user',
             'tagname',
             'name',
-            'body'
+            'body',
         ]);
     });
     
@@ -59,7 +59,7 @@ function grizzly() {
         target_commitish: args.target_commitish,
         name:             args.name,
         body:             args.body,
-        prerelease:       args.prerelease
+        prerelease:       args.prerelease,
     }).catch(log);
 }
 

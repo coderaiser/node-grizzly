@@ -83,9 +83,9 @@ function help() {
     console.log(usage);
     console.log('Options:');
     
-    Object.keys(bin).forEach((name) => {
+    for (const name of Object.keys(bin)) {
         const line = '  ' + name + ' ' + bin[name];
         console.log(line);
-    });
+    }
 }
 

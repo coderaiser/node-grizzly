@@ -1,3 +1,10 @@
+2020.03.21, v4.0.3
+
+feature:
+- (package) @octokit/rest v17.1.1
+- (package) readjson v2.0.1
+
+
 2020.02.18, v4.0.2
 
 fix:

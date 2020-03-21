@@ -27,7 +27,7 @@
     "url": "https://github.com/coderaiser/node-grizzly/issues"
   },
   "dependencies": {
-    "@octokit/rest": "^16.1.0",
+    "@octokit/rest": "^17.1.1",
     "checkup": "^1.3.0",
     "debug": "^4.1.0",
     "minimist": "^1.2.0",

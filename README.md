@@ -7,6 +7,7 @@ Create release on github with help of node.
 ```
 npm i grizzly -g
 ```
+
 ## How to use?
 
 ### Global
@@ -52,8 +53,8 @@ grizzly(token, {
     repo: 'grizzly',
     tag: 'v1.0.0',
     name: 'grizzly v1.0.0',
-    body: 'changelog'
-    prerelease: false /* default */
+    body: 'changelog',
+    prerelease: false, // default
 }).catch((error) => {
     console.error(error.message);
 });
@@ -63,15 +64,13 @@ grizzly(token, {
 
 - [putasset](https://github.com/coderaiser/node-putasset "Putasset") Upload asset to release on github.
 
-
 ## License
 
 MIT
 
-[NPMIMGURL]:                https://img.shields.io/npm/v/grizzly.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/node-grizzly.svg?style=flat
-[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
-[NPMURL]:                   https://npmjs.org/package/grizzly "npm"
-[DependencyStatusURL]:      https://david-dm.org/coderaiser/node-grizzly "Dependency Status"
-[LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
-
+[NPMIMGURL]: https://img.shields.io/npm/v/grizzly.svg?style=flat
+[DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/node-grizzly.svg?style=flat
+[LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[NPMURL]: https://npmjs.org/package/grizzly "npm"
+[DependencyStatusURL]: https://david-dm.org/coderaiser/node-grizzly "Dependency Status"
+[LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"

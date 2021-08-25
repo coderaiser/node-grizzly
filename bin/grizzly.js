@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import {createCommons} from 'simport';
-
-import release from '..';
 import check from 'checkup';
 import tryCatch from 'try-catch';
 import minimist from 'minimist';
+import {createCommons} from 'simport';
+
+import release from '../lib/grizzly.js';
 
 const {argv} = process;
 const {require} = createCommons(import.meta.url);

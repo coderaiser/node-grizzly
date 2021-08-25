@@ -35,7 +35,7 @@
     "try-catch": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
+    "eslint": "^7.32.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^9.2.1",
     "madrun": "^8.8.6",

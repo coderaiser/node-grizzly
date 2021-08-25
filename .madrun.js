@@ -1,8 +1,6 @@
-'use strict';
+import {run} from 'madrun';
 
-const {run} = require('madrun');
-
-module.exports = {
+export default {
     'lint': () => 'putout .',
     'fix:lint': () => run('lint', '--fix'),
     'test': () => 'echo "Error: no test specified" && exit 1',

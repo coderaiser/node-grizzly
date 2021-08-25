@@ -1,12 +1,16 @@
 #!/usr/bin/env node
 
-'use strict';
+import {createCommons} from 'simport';
 
-const release = require('..');
-const check = require('checkup');
-const tryCatch = require('try-catch');
+import release from '..';
+import check from 'checkup';
+import tryCatch from 'try-catch';
+import minimist from 'minimist';
+
 const {argv} = process;
-const args = require('minimist')(argv.slice(2), {
+const {require} = createCommons(import.meta.url);
+
+const args = minimist(argv.slice(2), {
     string: ['repo', 'user', 'tag', 'target_commitish', 'name', 'body', 'token'],
     boolean: ['prerelease'],
     alias: {

@@ -45,7 +45,7 @@ Data will be read before execution in next order (left is more important):
 ## Example
 
 ```js
-const grizzly = require('grizzly');
+import grizzly from 'grizzly';
 const token = 'token from https://github.com/settings/applications';
 
 grizzly(token, {

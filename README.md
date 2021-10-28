@@ -1,10 +1,8 @@
-# Grizzly [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL]
+# Grizzly [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL]
 
 [NPMIMGURL]: https://img.shields.io/npm/v/grizzly.svg?style=flat
-[DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/node-grizzly.svg?style=flat
 [LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [NPMURL]: https://npmjs.org/package/grizzly "npm"
-[DependencyStatusURL]: https://david-dm.org/coderaiser/node-grizzly "Dependency Status"
 [LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
 
 Create release on github with help of node.

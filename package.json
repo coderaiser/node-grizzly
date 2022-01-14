@@ -33,7 +33,6 @@
     "debug": "^4.1.0",
     "minimist": "^1.2.0",
     "readjson": "^2.0.1",
-    "simport": "^1.2.0",
     "try-catch": "^3.0.0"
   },
   "devDependencies": {

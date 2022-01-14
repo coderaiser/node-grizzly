@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
+import {createRequire} from 'module';
 import check from 'checkup';
 import tryCatch from 'try-catch';
 import minimist from 'minimist';
-import {createCommons} from 'simport';
 
 import release from '../lib/grizzly.js';
 
 const {argv} = process;
-const {require} = createCommons(import.meta.url);
+const {require} = createRequire(import.meta.url);
 
 const args = minimist(argv.slice(2), {
     string: ['repo', 'user', 'tag', 'target_commitish', 'name', 'body', 'token'],

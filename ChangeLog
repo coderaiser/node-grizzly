@@ -1,3 +1,14 @@
+2022.01.14, v5.0.1
+
+feature:
+- (package) putout v24.1.0
+- (package) eslint-plugin-putout v13.0.1
+- (grizzly) get rid of simport
+- (package) eslint-plugin-putout v10.10.0
+- (package) putout v20.18.0
+- (package) eslint v8.1.0
+
+
 2021.08.25, v5.0.0
 
 feature:

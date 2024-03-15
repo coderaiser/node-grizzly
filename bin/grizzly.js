@@ -1,17 +1,25 @@
 #!/usr/bin/env node
 
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 import check from 'checkup';
 import tryCatch from 'try-catch';
 import minimist from 'minimist';
-
+import process from 'node:process';
 import release from '../lib/grizzly.js';
 
 const {argv} = process;
 const {require} = createRequire(import.meta.url);
 
 const args = minimist(argv.slice(2), {
-    string: ['repo', 'user', 'tag', 'target_commitish', 'name', 'body', 'token'],
+    string: [
+        'repo',
+        'user',
+        'tag',
+        'target_commitish',
+        'name',
+        'body',
+        'token',
+    ],
     boolean: ['prerelease'],
     alias: {
         v: 'version',
@@ -92,4 +100,3 @@ function help() {
         console.log(line);
     }
 }
-

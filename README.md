@@ -51,6 +51,7 @@ Data will be read before execution in next order (left is more important):
 
 ```js
 import grizzly from 'grizzly';
+
 const token = 'token from https://github.com/settings/applications';
 
 grizzly(token, {

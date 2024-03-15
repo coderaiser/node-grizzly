@@ -43,7 +43,7 @@
     "putout": "^35.7.3"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   },
   "publishConfig": {
     "access": "public"

@@ -1,3 +1,12 @@
+2024.03.15, v6.0.0
+
+feature:
+- b1dd58b grizzly: drop support of node < 18
+- 229b10b grizzly: eslint-plugin-putout v22.4.1
+- 69bfd2f grizzly: madrun v10.0.1
+- 457e4ce grizzly: putout v35.7.3
+- 7930994 grizzly: @octokit/rest v20.0.2
+
 2022.01.14, v5.0.1
 
 feature:

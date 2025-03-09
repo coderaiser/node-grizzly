@@ -1,3 +1,17 @@
+2025.03.09, v6.1.0
+
+fix:
+- 78b883f grizzly: tagname -> tag
+- 1e14b8a grizzly: no args
+
+feature:
+- 0d3dfd2 grizzly: @putout/eslint-flat v2.1.0
+- 0e55633 grizzly: redlint v3.19.1
+- 85bb436 grizzly: eslint v9.22.0
+- fcc05bf grizzly: madrun v10.2.5
+- 199ed86 grizzly: eslint-plugin-putout v25.1.2
+- c72a848 grizzly: putout v38.5.3
+
 2024.03.15, v6.0.0
 
 feature:

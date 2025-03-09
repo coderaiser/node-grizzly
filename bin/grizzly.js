@@ -7,10 +7,11 @@ import tryCatch from 'try-catch';
 import minimist from 'minimist';
 import release from '../lib/grizzly.js';
 
-const {argv} = process;
-const {require} = createRequire(import.meta.url);
+const argv = process.argv.slice(2);
+const require = createRequire(import.meta.url);
+const info = () => require('../package');
 
-const args = minimist(argv.slice(2), {
+const args = minimist(argv, {
     string: [
         'repo',
         'user',
@@ -35,11 +36,9 @@ const args = minimist(argv.slice(2), {
     },
 });
 
-const argsEmpty = Object.keys(args).length === 1;
-
 if (args.version)
     version();
-else if (args.help || argsEmpty)
+else if (args.help || !argv.length)
     help();
 else
     grizzly();
@@ -83,8 +82,6 @@ function log(error) {
 function version() {
     console.log('v' + info().version);
 }
-
-const info = () => require('../package');
 
 function help() {
     const bin = require('../help');

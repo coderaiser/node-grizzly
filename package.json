@@ -39,7 +39,7 @@
     "eslint": "^8.1.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^25.1.2",
-    "madrun": "^10.0.1",
+    "madrun": "^10.2.5",
     "putout": "^38.5.3"
   },
   "engines": {

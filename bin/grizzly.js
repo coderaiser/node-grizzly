@@ -48,13 +48,13 @@ function grizzly() {
         check([
             args.repo,
             args.user,
-            args.tagname,
+            args.tag,
             args.name,
             args.body,
         ], [
             'repo',
             'user',
-            'tagname',
+            'tag',
             'name',
             'body',
         ]);

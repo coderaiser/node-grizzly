@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 import {createRequire} from 'node:module';
+import process from 'node:process';
 import check from 'checkup';
 import tryCatch from 'try-catch';
 import minimist from 'minimist';
-import process from 'node:process';
 import release from '../lib/grizzly.js';
 
 const {argv} = process;
@@ -84,9 +84,7 @@ function version() {
     console.log('v' + info().version);
 }
 
-function info() {
-    return require('../package');
-}
+const info = () => require('../package');
 
 function help() {
     const bin = require('../help');
